@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>数据工作者不可不知的五种程序语言</title>
+
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap-glyphicons/1.0/css/bootstrap-glyphicons.css">
+    <!--
+    <link rel="stylesheet" href="./bootstrap-dashboard.css">
+    -->
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- event drop charts dependency
+    <script src="./d3.min.js"></script>
+    <script src="./event-drops.js"></script>
+    <link rel="stylesheet" href="./event-drops.css">
+    -->
+
+    <style type="text/css">
+      body {
+        padding-left: 30px;
+        padding-right: 30px;
+     }
+      p{
+        font-size: 16px;
+        font-family: 微软雅黑;
+      }
+      #bigtitle{
+        font-family: 微软雅黑;
+        color:#4682B4;
+        text-align: center;
+      
+        
+      }
+      #note{
+        padding: 5px;
+        font-family: 微软雅黑;
+        text-align:right;
+        border: 1px solid #483D8B;
+        background-color: #EEFFEE;
+        color: #999999;
+      }
+      #pic1 {
+       position: inherit;
+       width: 60%;
+       left: 20%;
+      }
+      h4,ol{
+       font-family: 微软雅黑;
+      }
+      h3{
+        color:#4682B4;
+      }
+      .imgtext{
+        font-size: 15px;
+        font-family:微软雅黑;
+        text-align: center;
+      }
+      #main{
+            position: inherit;
+            left:15%;
+            height:400px;
+            width:70%;
+        }
+    </style>
+
+  </head>
+
+  <body>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <h2 id="bigtitle"><strong>数据工作者不可不知的五种程序语言</strong></h2>
+                
+                <div id="note">
+                  By 数据新闻工作室 阿琛Bonnie
+                </div>
+                <br>
+                  
+                <p>随着大数据的热潮不断升温，几乎各个领域都有洪水倾泻般的信息涌入。
+                专门负责整理、报道、呈现这些信息的数据新闻领域自然也不能置身事外。
+                不管你是专业的统计学家，还是业务型的企业管理者，亦或是数据新闻记者，
+                在大数据面前，如果你只会点击图形化操作软件上的几个按钮，
+                而不能把自己的逻辑思维化作编程语言，那么你在展开工作的时候必然会觉得束手束脚。<br></p>
+                <p>想要成为合格的数据工作者，对于以下这几个程序你应该要有一定的认识:<br></p>
+                
+                <h3>R</h3>
+                <p>在这些程序语言中间，最不能忽视的就是R。</p>
+                <p>自1997年悄悄出现，R首先显露的优势便是免费。这让被昂贵的Matlab或SAS折磨惯了的数据工作者们欣喜万分。</p>
+                <p>不出几年，R就变成了各个领域争先推崇的宝贝。无论是木讷的统计学家，还是脚步匆匆的WallStreet交易员，无论是生物学家，还是硅谷开发者，他们都相当熟悉R。像Google、Facebook、美国银行、New York Times这样的巨头公司通通都开始使用R。</p>
+                <p>然而R语言在国内的发展却不温不火。直到2011年，大数据突然火了起来，R语言一举杀进编程语言排行榜前20名。
+                刘思喆同学在“码农”界主流媒体《程序员》上的文章，让R语言一下子走到了很多人面前。
+                大家发现，这个经常被描述成统计编程语言的东西并不是仅仅擅长统计，其层出不穷的新模型、日趋成熟的开发设施，
+                再加上它跟Hadoop、多核计算、MPI等高性能计算技术的迅速结合，让人们看到了它在大数据时代的潜力。</p>
+                <p>R的优越性自然是不胜枚举，这里我就重点谈谈两点。</p>
+                <p>第一，R拥有层出不穷的包资源。这些R包使得新鲜的智慧可以源源不断地涌入R,从而使得R越来越强大、多样、完美。
+                从这个角度上来说，R具有其他语言望尘莫及的活力和潜力。</p>
+                <p>第二，R在绘图方面有着极高的天赋。其绘出图形的绚丽多姿让人不得不相信——原来数据是如此的美丽。
+                正如顶尖数据分析公司Metamarkets的CEO，MichaelDriscoll所说，“R更有用的是在画图，而不是建模。”</p>
+                <img src="http://datanews1.oss-cn-hangzhou.aliyuncs.com/%E7%B4%A0%E6%9D%901%20%E5%9B%BE%E7%89%87.jpg" alt="R包ggplot2所绘图形" id="pic1"><br>
+                <p class="imgtext">图1  使用R包ggplot2绘制的各种类型电影的预算与长度关系散点图</p>
+                <br>
+                  
+                <p>目前，全球估计有超过200万人使用R。最近的调查显示，到目前为止，R是数据科学界里最受欢迎的语言。</p>
+                <!-- 插入受欢迎的数据科学语言排行榜 -->
+                <br>
+                <div id="main"></div>
+                <!-- ECharts单文件引入 -->
+                <script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
+                <script type="text/javascript">
+                    // 路径配置
+                    require.config({
+                        paths: {
+                            echarts: 'http://echarts.baidu.com/build/dist'
+                        }
+                    });
+                    
+                    // 使用
+                    require(
+                        [
+                            'echarts',
+                            'echarts/chart/bar' // 使用柱状图就加载bar模块，按需加载
+                        ],
+                        function (ec) {
+                            // 基于准备好的dom，初始化echarts图表
+                            var myChart = ec.init(document.getElementById('main')); 
+                            
+                            var option = {
+                                  title:{
+                                    show:true,
+                                    text:'什么样的程序\统计语言是你在做分析、挖掘、科学计算的时候所需要的？【713名调查对象】',
+                                    x:'center',
+                                    y:'top',
+                                    textStyle:{
+                                      fontFamily:'微软雅黑'
+                                    }
+                                   
+                                },
+                                tooltip: {
+                                    show: true
+                                },
+                                legend: {
+                                    orient:'horizontal',
+                                    x:'center',
+                                    y:40,
+                                    data:['2013','2012','2011']
+                                },
+                                xAxis : [
+                                    {
+                                        type : 'category',
+                                        name : '语言种类',
+                                        data : ['R','Python','SQL','SAS','Java','MATLAB']
+                                    }
+                                ],
+                                yAxis : [
+                                    {
+                                        type : 'value',
+                                        name:'使用人数百分比（%）'
+                                    }
+                                ],
+                                series : [
+                                     {
+                                       "name":"2013",               //系列名称
+                                       "type":"bar",               //图表类型，line/scatter/bar/pie/radar
+                                       "data":[60.9,38.8,36.6,20.8,16.5,12.5]
+                                    },
+                                    {
+                                        "name":"2012",           //系列名称
+                                        "type":"bar",               //图表类型，
+                                        "data":[52.5,36.1,32.1,19.7,21.2,13.1]
+                                    },
+                                    {
+                                       "name":"2011",           //系列名称
+                                       "type":"bar",               //图表类型，
+                                       "data":[45.1,24.6,32.3,21.2,24.4,14.6]
+                                    }
+                                ]
+                            };
+                    
+                            // 为echarts对象加载数据 
+                            myChart.setOption(option); 
+                        }
+                    );
+                </script>
+                 <div class="imgtext">图2 几种程序设计语言使用百分比调查<br>
+                 ——数据来源：<a src="http://www.kdnuggets.com/2013/08/languages-for-analytics-data-mining-data-science.html">Top Languages for analytics, data mining, data science</a>
+                 </div>
+                <h3>Python</h3>
+                <p>如果说R是狂傲不羁的武林少侠，那么Python就是优雅温和的田园少女。</p>
+                <p>虽然，在程序运行效率方面，Python比起R或者Java、C等语言稍显逊色，但其也拥有其他语言无法媲美的闪光点。</p>
+                <p>Python最大的优势可以概括为清晰和简单。</p>
+                <p>Python具有非常清晰的语法结构。在清晰的语法结构基础上，读者可以随心使用自己熟悉的编程风格——无论是面向对象编程，面向过程编程，还是是函数式编程。</p>
+                <p>Python的简单也是出乎程序员们的想象的。默认的Python开发环境已经附带了很多诸如列表、元组、字典等高级数据类型，无需进一步编程就可以使用这些数据类型。而且Python语言提供了丰富的正则表达式函数以及很多访问Web页面的数据库，这使得处理非数值数据变得异常简单。</p>
+                
+                <h3>Matlab</h3>
+                <p>Matlab自1984年MatLab1.0诞生以来就经久不衰，可以说是数学类科技应用软件中的大佬。</p>
+                <p>MATLAB是matrix和laboratory两个词的组合，意为矩阵工厂（矩阵实验室）。是由美国Mathworks公司发布的主要面对科学计算、可视化及交互式程序设计的高级计算环境。</p>
+                <p>当然，Matlab标价昂贵，这无可避免地成为其最大的劣势；然而，在特定的利基市场上，它却无处不在——例如工程计算、控制设计、信号处理与通讯、图像处理、信号检测、金融建模设计与分析等领域。</p>
+                
+                <h3>Java</h3>
+                <p>提到Java，相信绝大多数的程序开发者们都熟悉得不能再熟悉了。它的应用领域太广，被贴上的标签太多（跨平台、动态Web、Internet计算等），以至于很多人忽视了它在数据科学领域的身影。</p>
+                <p>的确，Java没有和R、Python一样好的可视化功能，甚至没有Matlab那样强大的矩阵计算功能。但是，如果你需要建立一个庞大的系统，如果你需要使用过去的原型，那面向对象的Java通常会是你最适合的选择。</p>
+                
+                <h3>SQL</h3>
+                <p>比起上面几种语言，SQL的应用领域就非常狭窄了。它的使用只针对一种特定的对象——数据库。</p>
+                <p>SQL，全称结构化查询语言(Structured Query Language),用于管理、查询、更新关系数据库系统以及存取数据库数据。其包括DDL(数据定义语言),DML(数据操作语言）和 DCL（数据控制语言）几大语法版块。此外，SQL语法支持嵌套，这使得它也具有极大的灵活性。</p>
+                <p>1986年10月，美国国家标准协会对SQL进行了规范，得到了关系式数据库管理系统的标准语言（ANSI X3. 135-1986）。然而，各种通行的数据库系统在其实践过程中都对SQL规范作了某些编改和扩充。这就带来了一个比较头疼的问题——不同数据库系统之间的SQL不能完全相互通用，例如MySQL的很多语法就不能用于 SQL Server。</p>
+                <hr>
+                <p>当然，数据科学语言还有很多很多，诸如擅长大规模机械学习的Scala，专攻实时分析的Kafka,逐渐兴起并大有成为Java和Python竞争者势头的GO……</p>
+                <p>数据科学语言种类繁多，各有所长，各领风骚。想要成为数据新闻工作者的你，快快挑选一门你心仪的语言，开启美妙的数据编程之旅吧~</p>
+                <br>
+                <hr>
+                <h4>参考文献</h4>
+                <ol>
+                <li>中国统计网. 数据海洋.2013年数据分析、数据挖掘、数据科学使用语言排行榜[OL] <a href="http://www.itongji.cn/article/0S02G42013.html">http://www.itongji.cn/article/0S02G42013.html</a>,2013-08-30</li>
+                <li>3G大数据.大数据工具.十种程序语言帮你读懂大数据的“秘密”[OL]<a href="http://www.36dsj.com/archives/10687">http://www.36dsj.com/archives/10687</a>,2014-8-01</li>
+                <li>(美) RobertI.Kabacoff著，高涛，肖楠，陈钢译. R 语言实战[M].北京：人民邮电出版社，2013.</li>
+                <li>(美)Peter Harrington著，李锐，李鹏，曲亚东，王斌译. 机器学习实战[M].北京：人民邮电出版社，2013.</li>
+                </ol>
+
+            </div>
+        </div>
+        
+        <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+        <script src="http://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <script>
+        </script>
+  </body>
+</html>
+
