@@ -14,30 +14,64 @@
         padding-left: 30px;
         padding-right: 30px;
      }
+     #bigtitle{
+        font-family: 微软雅黑;
+        color:#4682B4;
+        text-align: center;
+      }
       p{
         font-size: 16px;
         font-family: 微软雅黑;
       }
-    #main{
+     #main{
             position: inherit;
             height:500px;
-
         }
+     h4,ol,ul{
+         font-family: 微软雅黑;
+        }
+      h3{
+         color:#4682B4;
+       }
+     #note{
+        padding: 5px;
+        font-family: 微软雅黑;
+        text-align:right;
+        border: 1px solid #483D8B;
+        background-color: #EEFFEE;
+        color: #999999;
+      }
+      #pic1{
+        position: inherit;
+        width: 50%;
+        height: auto;
+        left: 25%;
+      }
+      .imgtext{
+        font-size: 15px;
+        font-family:微软雅黑;
+        text-align: center;
+      }
     </style>
 </head>
 
 <body>
     <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        <h1>开放数据知多少</h1>
+        <h2 id="bigtitle"><strong>开放数据知多少</strong></h2>
+        <div id="note">
+             By 数据新闻工作室 阿琛Bonnie
+        </div>
+        <br>
+                  
         <p>以公开的数据为基础，是数据新闻的最基本特征之一。了解开放数据，已成为每个数据科学工作者必修的功课。<br>
         2009年，开放数据运动席卷全球。随后几年，中国跟进。现在，已有不少国家和地区正努力开放政府乃至企业的数据，以实现其经济和社会价值。<br>
         但直到现在，“开放数据”还是一个极远又极近的话题。
         对大多数人来说，“开放数据”似乎带有某种极客色彩，一时无法与“油盐酱醋”的普通生活相关联，但其实它无处不在。比如空气的味道，食物的温度，浩瀚的星空，更美好的生活，都与开放数据息息相关。<br>
         现在，就来一起来走近“开放数据”吧~</p>
-        <h2>1. 什么是开放数据</h2>
+        <h3>1. 什么是开放数据</h3>
         <p>通过公开渠道免费访问获得的、不受版权或知识产权限制的、可自由使用、增加价值、重新发布的数据。</p>
-        <h3>5大特点</h3>
+        <h4>5大特点</h4>
         <ol>
         <li>开放授权</li>
         <li>开放格式，机器可读</li>
@@ -45,13 +79,15 @@
         <li>电子化可下载</li>
         <li>免费公开获得</li>
         </ol>
-        <h3>概念区分</h3>
-        <!--插入表格-->
+        <h4>概念区分</h4>
+        <img id="pic1" src="http://pic000.oss-cn-beijing.aliyuncs.com/%E7%B4%A0%E6%9D%905-%E5%9B%BE%E7%89%871.png" alt="概念区分表" id="pic1"><br>
+        <p class="imgtext">图1  开放数据易混概念区分表</p>
+        <br>
         
-        <h2>2. 各国数据集开放程度大比拼</h2>
+        <h3>2. 各国数据集开放程度大比拼</h3>
         <p>开放数据指数是开放知识基金会开展的、针对各国（地区）数据开放程度的评估项目。它考察了10个关键数据集，是评估数据集开放程度的重要标准。</p>
         
-        <h3>2014年世界各国（地区）开放数据指数</h3>
+        <h4>2014年世界各国（地区）开放数据指数</h4>
         
         <div id="main"></div>
        
@@ -313,9 +349,9 @@
                 }
             );
         </script>
-        <h3>2014年联合国常任理事国主要数据集开放程度比较</h3>
+        <h4>2014年联合国常任理事国主要数据集开放程度比较</h4>
         <!--插入统计图-->
-        <h2>3.为什么我们要关心开放数据</h2>
+        <h3>3.为什么我们要关心开放数据</h3>
         <p>万物时刻都在产生数据，是历史，也是镜子，可映照过往，更可提醒社会服务的欠缺。
         我们相信，在未来，对数据的善用程度或将直接与社会服务水平挂钩。<br>
         比如，这些以开放数据为基础的应用已经在改善你我的生活:</p>
@@ -332,7 +368,7 @@
         追踪市政对城市衰退情况的处理，提供政府市民共建可能性。</li>
         </ul>
         <hr>
-        <p>数据来源:<br>
+        <p>数据来源:</p>
         <a href="http://index.okfn.org/">http://index.okfn.org/</a><br>
         <a href="http://opendatachina.com">http://opendatachina.com</a><br>
         基本内容转自 36大数据，图表绘制为原创</p>
