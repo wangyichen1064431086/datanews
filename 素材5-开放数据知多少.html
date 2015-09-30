@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>开放数据知多少</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap-glyphicons/1.0/css/bootstrap-glyphicons.css">
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <style type="text/css">
+     body {
+        padding-left: 30px;
+        padding-right: 30px;
+     }
+      p{
+        font-size: 16px;
+        font-family: 微软雅黑;
+      }
+    #main{
+            position: inherit;
+            height:500px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <h1>开放数据知多少</h1>
+        <p>以公开的数据为基础，是数据新闻的最基本特征之一。了解开放数据，已成为每个数据科学工作者必修的功课。<br>
+        2009年，开放数据运动席卷全球。随后几年，中国跟进。现在，已有不少国家和地区正努力开放政府乃至企业的数据，以实现其经济和社会价值。<br>
+        但直到现在，“开放数据”还是一个极远又极近的话题。
+        对大多数人来说，“开放数据”似乎带有某种极客色彩，一时无法与“油盐酱醋”的普通生活相关联，但其实它无处不在。比如空气的味道，食物的温度，浩瀚的星空，更美好的生活，都与开放数据息息相关。<br>
+        现在，就来一起来走近“开放数据”吧~</p>
+        <h2>1. 什么是开放数据</h2>
+        <p>通过公开渠道免费访问获得的、不受版权或知识产权限制的、可自由使用、增加价值、重新发布的数据。</p>
+        <h3>5大特点</h3>
+        <ol>
+        <li>开放授权</li>
+        <li>开放格式，机器可读</li>
+        <li>保证数据完整性</li>
+        <li>电子化可下载</li>
+        <li>免费公开获得</li>
+        </ol>
+        <h3>概念区分</h3>
+        <!--插入表格-->
+        
+        <h2>2. 各国数据集开放程度大比拼</h2>
+        <p>开放数据指数是开放知识基金会开展的、针对各国（地区）数据开放程度的评估项目。它考察了10个关键数据集，是评估数据集开放程度的重要标准。</p>
+        
+        <h3>2014年世界各国（地区）开放数据指数</h3>
+        
+        <div id="main"></div>
+       
+        <script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
+        <script type="text/javascript">
+            // 路径配置
+            require.config({
+                paths: {
+                    echarts: 'http://echarts.baidu.com/build/dist'
+                }
+            });
+            
+            // 使用
+            require(
+                [
+                    'echarts',
+                    'echarts/chart/map' // 使用柱状图就加载bar模块，按需加载
+                ],
+                function (ec) {
+                    // 基于准备好的dom，初始化echarts图表
+                    var myChart = ec.init(document.getElementById('main')); 
+                    
+                  var option = {
+                    title : {
+                        text: '世界各国开放数据指数 (2014)',
+                        subtext: '颜色越深开放数据指数越高，灰色为缺失数据',
+                        //sublink : 'http://esa.un.org/wpp/Excel-Data/population.htm',
+                        x:'center',
+                        y:'top'
+                    },
+                    tooltip : {
+                        trigger: 'item'
+                       /* formatter : function (params) {
+                            var value = (params.value + '').split('.');
+                            value = value[0].replace(/(\d{1,3})(?=(?:\d{3})+(?!\d))/g, '$1,')
+                                    + '.' + value[1];
+                            return params.seriesName + '<br/>' + params.name + ' : ' + value;
+                        }*/
+                    },
+                    toolbox: {
+                        show : true,
+                        orient : 'vertical',
+                        x: 'right',
+                        y: 'center',
+                        feature : {
+                            mark : {show: true},
+                            dataView : {show: true, readOnly: false},
+                            restore : {show: true},
+                            saveAsImage : {show: true}
+                        }
+                    },
+                    dataRange: {
+                        min: 0,
+                        max: 100,
+                       // text:['100%','0'],
+                        realtime: false,
+                        calculable : true,
+                        color: ['blue','white'],
+                        x:'150',
+                        y:'300'
+                    },
+                    series : [
+                        {
+                            name: '开放数据指数(2014),单位(%)',
+                            type: 'map',
+                            mapType: 'world',
+                            roam: true,
+                            mapLocation: {
+                                y : 60
+                            },
+                            itemStyle:{
+                                emphasis:{label:{show:true}}
+                            },
+                            data:[
+                                {name : 'Afghanistan', value : NaN},
+                                {name : 'Angola', value : NaN},
+                                {name : 'Albania', value : NaN},
+                                {name : 'United Arab Emirates', value : NaN},
+                                {name : 'Argentina', value : 42},//
+                                {name : 'Armenia', value : NaN},
+                                {name : 'French Southern and Antarctic Lands', value : NaN},
+                                {name : 'Australia', value : 72},//
+                                {name : 'Austria', value : 59},//
+                                {name : 'Azerbaijan', value : NaN},
+                                {name : 'Burundi', value : NaN},
+                                {name : 'Belgium', value : 39},//
+                                {name : 'Benin', value : 19},//
+                                {name : 'Burkina Faso', value : 36},//
+                                {name : 'Bangladesh', value : 34},//
+                                {name : 'Bulgaria', value : NaN},
+                                {name : 'The Bahamas', value : NaN},
+                                {name : 'Bosnia and Herzegovina', value : 21},//
+                                {name : 'Belarus', value : NaN},
+                                {name : 'Belize', value : NaN},
+                                {name : 'Bermuda', value : NaN},
+                                {name : 'Bolivia', value : NaN},
+                                {name : 'Brazil', value : 54},//
+                                {name : 'Brunei', value : NaN},
+                                {name : 'Bhutan', value : NaN},
+                                {name : 'Botswana', value : NaN},
+                                {name : 'Central African Republic', value : NaN},
+                                {name : 'Canada', value : 59},//
+                                {name : 'Switzerland', value : NaN},
+                                {name : 'Chile', value : 61},//
+                                {name : 'China', value : '37' },//53
+                                {name : 'Ivory Coast', value : NaN},
+                                {name : 'Cameroon', value : 23},//
+                                {name : 'Democratic Republic of the Congo', value : NaN},
+                                {name : 'Republic of the Congo', value : NaN},
+                                {name : 'Colombia', value : 66},//
+                                {name : 'Costa Rica', value : 38},//
+                                {name : 'Cuba', value : NaN},
+                                {name : 'Northern Cyprus', value : NaN},
+                                {name : 'Cyprus', value : NaN},
+                                {name : 'Czech Republic', value : 66},//
+                                {name : 'Germany', value : 69},//
+                                {name : 'Djibouti', value : NaN},
+                                {name : 'Denmark', value : 83},//
+                                {name : 'Dominican Republic', value : NaN},
+                                {name : 'Algeria', value : NaN},
+                                {name : 'Ecuador', value : 44},//
+                                {name : 'Egypt', value : 25},//
+                                {name : 'Eritrea', value : NaN},
+                                {name : 'Spain', value : NaN},
+                                {name : 'Estonia', value : NaN},
+                                {name : 'Ethiopia', value : NaN},
+                                {name : 'Finland', value : NaN},
+                                {name : 'Fiji', value : NaN},
+                                {name : 'Falkland Islands', value : NaN},
+                                {name : 'France', value : 80},//
+                                {name : 'Gabon', value : NaN},
+                                {name : 'United Kingdom', value : 97},//
+                                {name : 'Georgia', value : 50},//
+                                {name : 'Ghana', value : 24},//
+                                {name : 'Guinea', value : 10},//
+                                {name : 'Gambia', value : NaN},
+                                {name : 'Guinea Bissau', value : NaN},
+                                {name : 'Equatorial Guinea', value : NaN},
+                                {name : 'Greece', value : 38},//
+                                {name : 'Greenland', value : NaN},
+                                {name : 'Guatemala', value : 53},//
+                                {name : 'French Guiana', value : NaN},
+                                {name : 'Guyana', value : NaN},
+                                {name : 'Honduras', value : NaN},
+                                {name : 'Croatia', value : 41},//
+                                {name : 'Haiti', value : NaN},
+                                {name : 'Hungary', value : NaN},
+                                {name : 'Indonesia', value : 43},//
+                                {name : 'India', value : 68},//
+                                {name : 'Ireland', value : 48},//
+                                {name : 'Iran', value : NaN},
+                                {name : 'Iraq', value : NaN},
+                                {name : 'Iceland', value : 64},//
+                                {name : 'Israel', value : NaN},
+                                {name : 'Italy', value : 55},//
+                                {name : 'Jamaica', value : NaN},
+                                {name : 'Jordan', value : NaN},
+                                {name : 'Japan', value : 61},//
+                                {name : 'Kazakhstan', value : NaN},
+                                {name : 'Kenya', value : 22},//
+                                {name : 'Kyrgyzstan', value : NaN},
+                                {name : 'Cambodia', value : 36},//
+                                {name : 'South Korea', value : 53},//
+                                {name : 'Kosovo', value : NaN},
+                                {name : 'Kuwait', value : NaN},
+                                {name : 'Laos', value : NaN},
+                                {name : 'Lebanon', value : NaN},
+                                {name : 'Liberia', value : NaN},
+                                {name : 'Libya', value : NaN},
+                                {name : 'Sri Lanka', value : NaN},
+                                {name : 'Lesotho', value : NaN},
+                                {name : 'Lithuania', value : NaN},
+                                {name : 'Luxembourg', value : NaN},
+                                {name : 'Latvia', value : NaN},
+                                {name : 'Morocco', value : 25},//
+                                {name : 'Moldova', value : NaN},
+                                {name : 'Madagascar', value : NaN},
+                                {name : 'Mexico', value : 53},//
+                                {name : 'Macedonia', value : 61.3},//
+                                {name : 'Mali', value : 12},//
+                                {name : 'Myanmar', value : NaN},
+                                {name : 'Montenegro', value : NaN},
+                                {name : 'Mongolia', value : NaN},
+                                {name : 'Mozambique', value : NaN},
+                                {name : 'Mauritania', value : NaN},
+                                {name : 'Malawi', value : NaN},
+                                {name : 'Malaysia', value : NaN},
+                                {name : 'Namibia', value : NaN},
+                                {name : 'New Caledonia', value : NaN},
+                                {name : 'Niger', value : NaN},
+                                {name : 'Nigeria', value : 29},//
+                                {name : 'Nicaragua', value : NaN},
+                                {name : 'Netherlands', value : 64},//
+                                {name : 'Norway', value : 71},//
+                                {name : 'Nepal', value : 34},//
+                                {name : 'New Zealand', value : 72},//
+                                {name : 'Oman', value : 18},//
+                                {name : 'Pakistan', value : 45},//
+                                {name : 'Panama', value : 25},//
+                                {name : 'Peru', value : NaN},
+                                {name : 'Philippines', value : 31},//
+                                {name : 'Papua New Guinea', value : NaN},
+                                {name : 'Poland', value : 42},//
+                                {name : 'Puerto Rico', value : NaN},
+                                {name : 'North Korea', value : NaN},
+                                {name : 'Portugal', value : NaN},
+                                {name : 'Paraguay', value : 45},//
+                                {name : 'Qatar', value : NaN},
+                                {name : 'Romania', value : 64},//
+                                {name : 'Russia', value : 43},//
+                                {name : 'Rwanda', value : NaN},
+                                {name : 'Western Sahara', value : NaN},
+                                {name : 'Saudi Arabia', value : 28},//
+                                {name : 'Sudan', value : NaN},
+                                {name : 'South Sudan', value : NaN},
+                                {name : 'Senegal', value : 34},//
+                                {name : 'Solomon Islands', value : NaN},
+                                {name : 'Sierra Leone', value : 15},//
+                                {name : 'El Salvador', value : NaN},
+                                {name : 'Somaliland', value : NaN},
+                                {name : 'Somalia', value : NaN},
+                                {name : 'Republic of Serbia', value : 42},//
+                                {name : 'Suriname', value : NaN},
+                                {name : 'Slovakia', value : 35},//
+                                {name : 'Slovenia', value : 54},//
+                                {name : 'Sweden', value : 66},//
+                                {name : 'Swaziland', value : NaN},
+                                {name : 'Syria', value : NaN},
+                                {name : 'Chad', value : NaN},
+                                {name : 'Togo', value : NaN},
+                                {name : 'Thailand', value : 36},//
+                                {name : 'Tajikistan', value : NaN},
+                                {name : 'Turkmenistan', value : NaN},
+                                {name : 'East Timor', value : NaN},
+                                {name : 'Trinidad and Tobago', value : NaN},
+                                {name : 'Tunisia', value : 34},//
+                                {name : 'Turkey', value : 53},//
+                                {name : 'United Republic of Tanzania', value : 21},//
+                                {name : 'Uganda', value : NaN},
+                                {name : 'Ukraine', value : NaN},
+                                {name : 'Uruguay', value : 66},//
+                                {name : 'United States of America', value : 70},//
+                                {name : 'Uzbekistan', value : NaN},
+                                {name : 'Venezuela', value : NaN},
+                                {name : 'Vietnam', value : NaN},
+                                {name : 'Vanuatu', value : NaN},
+                                {name : 'West Bank', value : NaN},
+                                {name : 'Yemen', value : NaN},
+                                {name : 'South Africa', value : 48},//
+                                {name : 'Zambia', value : 27},//
+                                {name : 'Zimbabwe', value : NaN}
+                            ]
+                        }
+                    ]
+                };
+    
+                    // 为echarts对象加载数据 
+                    myChart.setOption(option); 
+                }
+            );
+        </script>
+        <h3>2014年联合国常任理事国主要数据集开放程度比较</h3>
+        <!--插入统计图-->
+        <h2>3.为什么我们要关心开放数据</h2>
+        <p>万物时刻都在产生数据，是历史，也是镜子，可映照过往，更可提醒社会服务的欠缺。
+        我们相信，在未来，对数据的善用程度或将直接与社会服务水平挂钩。<br>
+        比如，这些以开放数据为基础的应用已经在改善你我的生活:</p>
+        <ul>
+        <li>NYC Hired<br>
+        结合纽约的就业开放数据，使用户寻找就业机会更具针对性。</li>
+        <li>PlaceLive<br>
+        整合政府释放的开放数据，优化买房策略。</li>
+        <li>Yelp<br>
+        结合旧金山提供的数据，知晓餐厅卫生情况。</li>
+        <li>Hackcessible<br>
+        整合西雅图人行横道状态数据以及Goolge海拔API等，实时反映人行道是否可用，方便选择合理路线。</li>
+        <li>BlightStatus<br>
+        追踪市政对城市衰退情况的处理，提供政府市民共建可能性。</li>
+        </ul>
+        <hr>
+        <p>数据来源:<br>
+        <a href="http://index.okfn.org/">http://index.okfn.org/</a><br>
+        <a href="http://opendatachina.com">http://opendatachina.com</a><br>
+        基本内容转自 36大数据，图表绘制为原创</p>
+      </div>
+    </div>
+   <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+   <script src="http://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+</body>
+</html>
