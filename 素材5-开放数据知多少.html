@@ -20,7 +20,11 @@
         text-align: center;
       }
       p{
-        font-size: 16px;
+        font-size: 18px;
+        font-family: 微软雅黑;
+      }
+      a{
+        font-size: 18px;
         font-family: 微软雅黑;
       }
      #main{
@@ -43,11 +47,17 @@
             position: inherit;
             height:500px;
         }
-     h4,ol,ul{
+     ol,ul{
+         font-size: 18px;
          font-family: 微软雅黑;
         }
-      h3{
+     h4{
+        font-family: 微软雅黑;
+     }
+     h3{
          color:#4682B4;
+          font-family: 微软雅黑;
+          /*font-weight: bold;*/
        }
      #note{
         padding: 5px;
@@ -59,9 +69,14 @@
       }
       #pic1{
         position: inherit;
-        width: 50%;
+        width: 30%;
         height: auto;
-        left: 25%;
+        left: 35%;
+      }
+      .pictitle{
+        font-size: 24px;
+        font-family:微软雅黑;
+        text-align: center;
       }
       .imgtext{
         font-size: 15px;
@@ -87,7 +102,7 @@
         现在，就来一起来走近“开放数据”吧~</p>
         <h3>1. 什么是开放数据</h3>
         <p>通过公开渠道免费访问获得的、不受版权或知识产权限制的、可自由使用、增加价值、重新发布的数据。</p>
-        <h4>5大特点</h4>
+        <h4>开放数据5大特点</h4>
         <ol>
         <li>开放授权</li>
         <li>开放格式，机器可读</li>
@@ -95,25 +110,46 @@
         <li>电子化可下载</li>
         <li>免费公开获得</li>
         </ol>
-        <h4>概念区分</h4>
-        <img id="pic1" src="http://pic000.oss-cn-beijing.aliyuncs.com/%E7%B4%A0%E6%9D%905-%E5%9B%BE%E7%89%871.png" alt="概念区分表" id="pic1"><br>
-        <p class="imgtext">图1  开放数据易混概念区分表</p>
+        <p class="pictitle"> 开放数据易混概念区分表</p>
+        <img id="pic1" src="http://pic000.oss-cn-beijing.aliyuncs.com/5-1gray.png" alt="概念区分表" id="pic1"><br>
         <br>
         
         <h3>2. 各国数据集开放程度大比拼</h3>
         <p>开放数据指数是开放知识基金会开展的、针对各国（地区）数据开放程度的评估项目。它考察了10个关键数据集，是评估数据集开放程度的重要标准。</p>
-        
-        <!--<h4>2014年世界各国（地区）开放数据指数</h4>-->
-        
+        <br>
+        <div class="pictitle">2014年世界各国开放数据指数 <br>（颜色越深开放数据指数越高，灰色为缺失数据）</div>       
         <div id="main"></div>
-       
-        
-        <h4>2014年联合国常任理事国主要数据集开放程度比较</h4>
+        <p>中国开放数据指数为37%，世界排名仅第57位。</p>
+        <p>英国开放数据指数为97%，世界排名第1位。</p>
+        <br>
+        <br>
+        <br>
+        <p class="pictitle">2014年联合国常任理事国主要数据集开放程度比较</p>
         <!--插入统计图-->
-        <div id="main1"></div>
-        <div id="main2"></div>
-        <div id="main3"></div>
-        <div id="main4"></div>
+        <div class="row">
+          <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+          </div>
+          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+             <div id="main1"></div>
+          </div>
+          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+             <div id="main2"></div>
+          </div>
+          <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+          </div>
+          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+             <div id="main3"></div>
+          </div>
+          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+             <div id="main4"></div>
+          </div>
+          <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+          </div>
+        </div>
         
     <!-- ECharts单文件引入 -->
         
@@ -137,7 +173,8 @@
         <p>数据来源:</p>
         <a href="http://index.okfn.org/">http://index.okfn.org/</a><br>
         <a href="http://opendatachina.com">http://opendatachina.com</a><br>
-        基本内容转自 36大数据，图表绘制为原创</p>
+        <p>基本内容转自 36大数据<a href="http://www.36dsj.com/archives/33602">http://www.36dsj.com/archives/33602</a></p>
+        <p>图表绘制为原创</p>
       </div>
     </div>
     
@@ -166,13 +203,13 @@
                 var myChart = ec.init(document.getElementById('main')); 
                 
               var option = {
-                title : {
-                    text: '世界各国开放数据指数 (2014)',
-                    subtext: '颜色越深开放数据指数越高，灰色为缺失数据',
+               /* title : {
+                    text: '2014年世界各国开放数据指数 \n（颜色越深开放数据指数越高，灰色为缺失数据）',
                     //sublink : 'http://esa.un.org/wpp/Excel-Data/population.htm',
                     x:'center',
                     y:'top'
-                },
+                    
+                },*/
                 tooltip : {
                     trigger: 'item'
                    /* formatter : function (params) {
@@ -182,7 +219,7 @@
                         return params.seriesName + '<br/>' + params.name + ' : ' + value;
                     }*/
                 },
-                toolbox: {
+               /* toolbox: {
                     show : true,
                     orient : 'vertical',
                     x: 'right',
@@ -193,7 +230,7 @@
                         restore : {show: true},
                         saveAsImage : {show: true}
                     }
-                },
+                },*/
                 dataRange: {
                     min: 0,
                     max: 100,
@@ -201,7 +238,7 @@
                     realtime: false,
                     calculable : true,
                     color: ['blue','white'],
-                    x:'150',
+                    x:'350',
                     y:'300'
                 },
                 series : [
@@ -449,7 +486,7 @@
                         textStyle : {
                             color : '#4682B4',
                             fontFamily : '微软雅黑',
-                            fontSize : 35,
+                            fontSize : 24,
                             fontWeight : 'bolder'
                         }
                     },
@@ -459,22 +496,13 @@
                     },
                     legend: {
                         orient : 'vertical',
-                        x : '400',
+                        x : 'left',
                         y : '350',
                         itemGap:12,
                         data:['英国','美国','俄罗斯','法国','中国'],
                         textStyle : {
                             fontFamily : '微软雅黑',
                             fontSize : 16,
-                        }
-                    },
-                    toolbox: {
-                        show : true,
-                        feature : {
-                            mark : {show: true},
-                            dataView : {show: true, readOnly: false},
-                            restore : {show: true},
-                            saveAsImage : {show: true}
                         }
                     },
                     series : [
@@ -503,7 +531,7 @@
                                         //position:inner,
                                         //distance:0.5,
                                         textStyle :{
-                                            fontSize : '16',
+                                            fontSize : '18',
                                             fontFamily : '微软雅黑',
                                             color:'rgb(51,51,51)'
                                             //fontWeight : 'bold'
@@ -511,6 +539,7 @@
                                     },
                                     labelLine:{
                                         show:true,
+                                        length:3,
                                         lineStyle:{
                                             color:'rgb(51,51,51)'
                                         }
@@ -541,7 +570,7 @@
                                     label :{
                                         show : true,
                                         textStyle :{
-                                            fontSize : '16',
+                                            fontSize : '18',
                                             fontFamily : '微软雅黑',
                                             color:'rgb(255,184,0)' 
                                             //fontWeight : 'bold'
@@ -549,6 +578,7 @@
                                     },
                                     labelLine:{
                                         show:true,
+                                        length:3,
                                         lineStyle:{
                                             color:'rgb(255,184,0)'
                                         }
@@ -578,7 +608,7 @@
                                     label :{
                                         show : true,
                                         textStyle :{
-                                            fontSize : '16',
+                                            fontSize : '18',
                                             fontFamily : '微软雅黑',
                                             color:'rgb(255,66,0)'
                                             //fontWeight : 'bold'
@@ -586,6 +616,7 @@
                                     },
                                     labelLine:{
                                         show:true,
+                                        length:3,
                                         lineStyle:{
                                             color:'rgb(255,66,0)'
                                         }
@@ -616,7 +647,7 @@
                                     label :{
                                         show : true,
                                         textStyle :{
-                                            fontSize : '16',
+                                            fontSize : '18',
                                             fontFamily : '微软雅黑',
                                             color:'rgb(201,255,69)'
                                             //fontWeight : 'bold'
@@ -624,6 +655,7 @@
                                     },
                                     labelLine:{
                                         show:true,
+                                        length:3,
                                         lineStyle:{
                                             color:'rgb(201,255,69)'
                                         }
@@ -654,7 +686,7 @@
                                     label :{
                                         show : true,
                                         textStyle :{
-                                            fontSize : '16',
+                                            fontSize : '18',
                                             fontFamily : '微软雅黑',
                                             color:'rgb(0,149,74)'
                                             //fontWeight : 'bold'
@@ -662,6 +694,7 @@
                                     },
                                     labelLine:{
                                         show:true,
+                                        length:3,
                                         lineStyle:{
                                             color:'rgb(0,149,74)'
                                         }
@@ -722,22 +755,13 @@
                         textStyle : {
                             color : '#4682B4',
                             fontFamily : '微软雅黑',
-                            fontSize : 35,
+                            fontSize : 24,
                             fontWeight : 'bolder'
                         }
                     },
                     tooltip : {
                         show: true,
                         //formatter: "{a} <br/>{b} : {c} ({d}%)"//?
-                    },
-                    toolbox: {
-                        show : true,
-                        feature : {
-                            mark : {show: true},
-                            dataView : {show: true, readOnly: false},
-                            restore : {show: true},
-                            saveAsImage : {show: true}
-                        }
                     },
                     series : [
                         {
@@ -765,7 +789,7 @@
                                         //position:inner,
                                         //distance:0.5,
                                         textStyle :{
-                                            fontSize : '16',
+                                            fontSize : '18',
                                             fontFamily : '微软雅黑',
                                             color:'rgb(51,51,51)'
                                             //fontWeight : 'bold'
@@ -773,6 +797,7 @@
                                     },
                                     labelLine:{
                                         show:true,
+                                        length:3,
                                         lineStyle:{
                                             color:'rgb(51,51,51)'
                                         }
@@ -803,7 +828,7 @@
                                     label :{
                                         show : true,
                                         textStyle :{
-                                            fontSize : '16',
+                                            fontSize : '18',
                                             fontFamily : '微软雅黑',
                                             color:'rgb(255,184,0)' 
                                             //fontWeight : 'bold'
@@ -811,6 +836,7 @@
                                     },
                                     labelLine:{
                                         show:true,
+                                        length:3,
                                         lineStyle:{
                                             color:'rgb(255,184,0)'
                                         }
@@ -840,7 +866,7 @@
                                     label :{
                                         show : true,
                                         textStyle :{
-                                            fontSize : '16',
+                                            fontSize : '18',
                                             fontFamily : '微软雅黑',
                                             color:'rgb(255,66,0)'
                                             //fontWeight : 'bold'
@@ -848,6 +874,7 @@
                                     },
                                     labelLine:{
                                         show:true,
+                                        length:3,
                                         lineStyle:{
                                             color:'rgb(255,66,0)'
                                         }
@@ -878,7 +905,7 @@
                                     label :{
                                         show : true,
                                         textStyle :{
-                                            fontSize : '16',
+                                            fontSize : '18',
                                             fontFamily : '微软雅黑',
                                             color:'rgb(201,255,69)'
                                             //fontWeight : 'bold'
@@ -886,6 +913,7 @@
                                     },
                                     labelLine:{
                                         show:true,
+                                        length:3,
                                         lineStyle:{
                                             color:'rgb(201,255,69)'
                                         }
@@ -916,7 +944,7 @@
                                     label :{
                                         show : true,
                                         textStyle :{
-                                            fontSize : '16',
+                                            fontSize : '18',
                                             fontFamily : '微软雅黑',
                                             color:'rgb(0,149,74)'
                                             //fontWeight : 'bold'
@@ -924,6 +952,7 @@
                                     },
                                     labelLine:{
                                         show:true,
+                                        length:3,
                                         lineStyle:{
                                             color:'rgb(0,149,74)'
                                         }
@@ -984,22 +1013,13 @@
                         textStyle : {
                             color : '#4682B4',
                             fontFamily : '微软雅黑',
-                            fontSize : 35,
+                            fontSize : 24,
                             fontWeight : 'bolder'
                         }
                     },
                     tooltip : {
                         show: true,
                         //formatter: "{a} <br/>{b} : {c} ({d}%)"//?
-                    },
-                    toolbox: {
-                        show : true,
-                        feature : {
-                            mark : {show: true},
-                            dataView : {show: true, readOnly: false},
-                            restore : {show: true},
-                            saveAsImage : {show: true}
-                        }
                     },
                     series : [
                         {
@@ -1027,7 +1047,7 @@
                                         //position:inner,
                                         //distance:0.5,
                                         textStyle :{
-                                            fontSize : '16',
+                                            fontSize : '18',
                                             fontFamily : '微软雅黑',
                                             color:'rgb(51,51,51)'
                                             //fontWeight : 'bold'
@@ -1035,6 +1055,7 @@
                                     },
                                     labelLine:{
                                         show:true,
+                                        length:3,
                                         lineStyle:{
                                             color:'rgb(51,51,51)'
                                         }
@@ -1065,7 +1086,7 @@
                                     label :{
                                         show : true,
                                         textStyle :{
-                                            fontSize : '16',
+                                            fontSize : '18',
                                             fontFamily : '微软雅黑',
                                             color:'rgb(255,184,0)' 
                                             //fontWeight : 'bold'
@@ -1073,6 +1094,7 @@
                                     },
                                     labelLine:{
                                         show:true,
+                                        length:3,
                                         lineStyle:{
                                             color:'rgb(255,184,0)'
                                         }
@@ -1102,7 +1124,7 @@
                                     label :{
                                         show : true,
                                         textStyle :{
-                                            fontSize : '16',
+                                            fontSize : '18',
                                             fontFamily : '微软雅黑',
                                             color:'rgb(255,66,0)'
                                             //fontWeight : 'bold'
@@ -1110,6 +1132,7 @@
                                     },
                                     labelLine:{
                                         show:true,
+                                        length:3,
                                         lineStyle:{
                                             color:'rgb(255,66,0)'
                                         }
@@ -1140,7 +1163,7 @@
                                     label :{
                                         show : true,
                                         textStyle :{
-                                            fontSize : '16',
+                                            fontSize : '18',
                                             fontFamily : '微软雅黑',
                                             color:'rgb(201,255,69)'
                                             //fontWeight : 'bold'
@@ -1148,6 +1171,7 @@
                                     },
                                     labelLine:{
                                         show:true,
+                                        length:3,
                                         lineStyle:{
                                             color:'rgb(201,255,69)'
                                         }
@@ -1178,7 +1202,7 @@
                                     label :{
                                         show : true,
                                         textStyle :{
-                                            fontSize : '16',
+                                            fontSize : '18',
                                             fontFamily : '微软雅黑',
                                             color:'rgb(0,149,74)'
                                             //fontWeight : 'bold'
@@ -1186,6 +1210,7 @@
                                     },
                                     labelLine:{
                                         show:true,
+                                        length:3,
                                         lineStyle:{
                                             color:'rgb(0,149,74)'
                                         }
@@ -1245,22 +1270,13 @@
                         textStyle : {
                             color : '#4682B4',
                             fontFamily : '微软雅黑',
-                            fontSize : 35,
+                            fontSize : 24,
                             fontWeight : 'bolder'
                         }
                     },
                     tooltip : {
                         show: true,
                         //formatter: "{a} <br/>{b} : {c} ({d}%)"//?
-                    },
-                    toolbox: {
-                        show : true,
-                        feature : {
-                            mark : {show: true},
-                            dataView : {show: true, readOnly: false},
-                            restore : {show: true},
-                            saveAsImage : {show: true}
-                        }
                     },
                     series : [
                         {
@@ -1288,7 +1304,7 @@
                                         //position:inner,
                                         //distance:0.5,
                                         textStyle :{
-                                            fontSize : '16',
+                                            fontSize : '18',
                                             fontFamily : '微软雅黑',
                                             color:'rgb(51,51,51)'
                                             //fontWeight : 'bold'
@@ -1296,6 +1312,7 @@
                                     },
                                     labelLine:{
                                         show:true,
+                                        length:3,
                                         lineStyle:{
                                             color:'rgb(51,51,51)'
                                         }
@@ -1326,7 +1343,7 @@
                                     label :{
                                         show : true,
                                         textStyle :{
-                                            fontSize : '16',
+                                            fontSize : '18',
                                             fontFamily : '微软雅黑',
                                             color:'rgb(255,184,0)' 
                                             //fontWeight : 'bold'
@@ -1334,6 +1351,7 @@
                                     },
                                     labelLine:{
                                         show:true,
+                                        length:3,
                                         lineStyle:{
                                             color:'rgb(255,184,0)'
                                         }
@@ -1363,7 +1381,7 @@
                                     label :{
                                         show : true,
                                         textStyle :{
-                                            fontSize : '16',
+                                            fontSize : '18',
                                             fontFamily : '微软雅黑',
                                             color:'rgb(255,66,0)'
                                             //fontWeight : 'bold'
@@ -1371,6 +1389,7 @@
                                     },
                                     labelLine:{
                                         show:true,
+                                        length:3,
                                         lineStyle:{
                                             color:'rgb(255,66,0)'
                                         }
@@ -1401,7 +1420,7 @@
                                     label :{
                                         show : true,
                                         textStyle :{
-                                            fontSize : '16',
+                                            fontSize : '18',
                                             fontFamily : '微软雅黑',
                                             color:'rgb(201,255,69)'
                                             //fontWeight : 'bold'
@@ -1409,6 +1428,7 @@
                                     },
                                     labelLine:{
                                         show:true,
+                                        length:3,
                                         lineStyle:{
                                             color:'rgb(201,255,69)'
                                         }
@@ -1439,7 +1459,7 @@
                                     label :{
                                         show : true,
                                         textStyle :{
-                                            fontSize : '16',
+                                            fontSize : '18',
                                             fontFamily : '微软雅黑',
                                             color:'rgb(0,149,74)'
                                             //fontWeight : 'bold'
@@ -1447,6 +1467,7 @@
                                     },
                                     labelLine:{
                                         show:true,
+                                        length:3,
                                         lineStyle:{
                                             color:'rgb(0,149,74)'
                                         }
