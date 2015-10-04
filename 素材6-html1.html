@@ -1,0 +1,27 @@
+ <!DOCTYPE html>
+                    <html>
+                    <head>
+                        <title>HTML Example</title>
+                        <style type="text/css">
+                            #title{
+                                color: rgb(4,50,155);
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <h3 id="title">Hello World!</h3>
+                        <p>I like <span>HTML</span>,CSS and JavaScript.</p>
+                        <a href="https://developer.mozilla.org/en-US/docs/Web">
+                          Visit this website to learn web technology.
+                        </a>
+                        <br>
+                        <button type="button" onclick="myFunction()">点击这里改变标题颜色</button>
+                        <script>
+                              function myFunction()
+                              {
+                              x=document.getElementById("title") // 找到元素
+                              x.style.color="#ff0000";          // 改变样式
+                              }
+                        </script>
+                    </body>
+                    </html>

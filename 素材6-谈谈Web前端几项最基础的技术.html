@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>welcome ...</title>
+
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap-glyphicons/1.0/css/bootstrap-glyphicons.css">
+    <!--
+    <link rel="stylesheet" href="./bootstrap-dashboard.css">
+    -->
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- event drop charts dependency
+    <script src="./d3.min.js"></script>
+    <script src="./event-drops.js"></script>
+    <link rel="stylesheet" href="./event-drops.css">
+    -->
+
+    <style type="text/css">
+       body {
+        padding-left: 30px;
+        padding-right: 30px;
+       }
+      p,ol{
+        font-size: 16px;
+        font-family: 微软雅黑;
+      }
+      h4{
+         font-family: 微软雅黑;
+      }
+      #bigtitle{
+        font-family: 微软雅黑;
+        color:#4682B4;
+        text-align: center;
+      }
+      #note{
+        padding: 5px;
+        font-family: 微软雅黑;
+        text-align:right;
+        border: 1px solid #483D8B;
+        background-color: #EEFFEE;
+        color: #999999;
+      }
+       h3{
+          font-family: 微软雅黑;
+          color:#4682B4;
+        }
+    </style>
+
+  </head>
+
+  <body>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12">
+                <h2 id="bigtitle">谈谈Web前端几项最基础的技术</h2>
+                <div id="note">
+                  By 数据传播工作室 阿琛Bonnie
+                </div>
+                <br>
+                <p>在这个浏览器时代，无论你是什么专业背景出身，无论你将来要从事什么行业，如果你不学点网页构建知识那还真是有点跟不上时代步伐了。当然，想要在数据新闻领域游刃有余的话，掌握一定的Web前端开放技术也是最起码的。</p>
+                <p>以生动甚至交互的方式将数据信息可视化呈现出来可以说是数据新闻制作的最后一步，同时也是非常关键的一步。有了“可视化呈现”，“生动”，“交互”这些关键词，笔者认为，这一步的工作在某种程度上，可以等同于Web前端开发工作。</p>
+                <p>Web前端开发是从网页制作演变而来的，名称上有很明显的时代特征。
+                在互联网的演化进程中，网页制作是Web1.0时代的产物，那时网站的主要内容都是静态的，用户使用网站的行为也以浏览为主。
+                2005年以后，互联网进入Web2.0时代，各种类似桌面软件的Web应用大量涌现，网站的前端由此发生了翻天覆地的变化。网页不再只是承载单一的文字和图片，各种富媒体让网页的内容更加生动，网页上软件化的交互形式为用户提供了更好的使用体验，这些都是基于前端技术实现的。 以前会Photoshop和Dreamweaver就可以制作网页，现在只掌握这些已经远远不够了。无论是开发难度上，还是开发方式上，现在的网页制作都更接近传统的网站后台开发，所以现在不再叫网页制作，而是叫Web前端开发。</p>
+                <p>Web前端开发是一项很特殊的工作，涵盖的知识面非常广，既有具体的技术，又有抽象的理念。</p>
+                <p>今天，我们就来简单谈谈Web前端几项最基础的技术。</p>
+                
+                <h3>HTML，CSS，JavaScript的角色分工</h3>
+                <p>HTML,CSS，JavaScript可以说是Web前端最主要的三个要素。理解它们在网页建构中各自的角色分工以及之间的关系是掌握它们的第一步。</p>
+                <p>对于Web前端初学者来说，不妨通过下面的比喻来理解他们：</p>
+                <p>如果说网页是一个人体。那么——HTML就是骨架，CSS就是衣服， JavaScript就是人体的动作。三者各司其职，各尽其能，从而有机地组成一个完整又美丽，整洁又有生命力的人体。</p>
+                <p>人体有一个不断发展成长的过程，Web前端技术也是如此。这样就也可以把HTML5，CSS3, Jquery这些东西理解清楚了。HTML5相比HTML拥有了更多新长出来的骨头，同时，也去掉了之前笨拙的旧骨头。CSS3相比CSS则是更漂亮，更帅气的衣服。JavaScript是人体单个的动作，jQuery则是把一组组复杂的动作打包成了一个个简洁的招式（例如喝水就是一个招式，包含了动作拿起杯子、把嘴巴凑到杯子旁边、嘴巴吸一口水、吞下水、放下杯子）。</p>
+                    
+                <h3>HTML初探</h3>
+                <p>HTML是Hypertext Markup Language(超文本标记语言）的缩写。顾名思义，HTML是一种标记语言，其标记以应用于文档内容（例如文本）的元素为其存在形式。HTML定义了各种各样的元素标签，它们就好比人体不同部位的骨头，在HTML文档中发挥着各自不同的作用。元素可以用属性来进行配置。</p>
+                <p>元素和属性不会孤立存在，它们是为HTML文档内容而服务的。要创建一个HTML文档，可以使用各种文档编辑器，可以是功能强大的Web脚本专用编辑器（如Atom,Komodo Edit等），也可以就简单创建一个文本文件，把扩展名改为.html即可。</p>
+                <p>以下是一个最最简单的针对浏览器的HTML文档</p>
+                <!--插入HTML文档1-->
+                <textarea rows="13" cols="100">
+                    <!DOCTYPE html>
+                    <html>
+                    <head>
+                        <title>HTML Example</title>
+                    </head>
+                    <body>
+                          <h3>Hello World!</h3>
+                          <p>I like <span>HTML</span>,CSS and JavaScript.</p>
+                          <a href="https://developer.mozilla.org/en-US/docs/Web">
+                            Visit this website to learn web technology.
+                          </a>
+                    </body>
+                    </html>
+                </textarea>
+                
+                
+                <h3>CSS初探</h3>
+                <p>CSS是Cascading Style Sheets(层叠式样式表）的缩写，用来规定HTML文档的呈现形式，包括外观、格式等的编排。CSS样式由一条或多条以分号隔开的样式声明组成。每条声明包含着一个CSS属性和该属性的值。</p>
+                <!--插入一条简单的CSS样式-->
+                <p>CSS样式不是光定义完了就可以了，它还需要被应用，即告诉浏览器它要影响哪些元素。CSS样式的应用主要有5种方式，按照浏览器索取的优先级次序排列如下：</p>
+                <ol>
+                <li>元素内嵌样式
+                ——用每个元素的全局属性style定义</li>
+                <li>文档内嵌样式
+                ——用style元素定义</li>
+                <li>外部样式
+                ——用link元素导入.css样式表文件</li>
+                <li>用户样式
+                ——在浏览器的用户样式文件中添加</li>
+                <li>浏览器样式
+                ——元素尚未设置样式时浏览器应用在它身上的默认样式</li>
+                </ol>
+                <p>以下是一个简单的使用CSS文档内嵌样式的HTML文档</p>
+                <textarea rows="19" cols="100">
+                    <!DOCTYPE html>
+                    <html>  
+                    <head>
+                        <title>HTML Example</title>
+                        <style type="text/css">
+                           #title{                    /*CSS文档内嵌样式定义标题颜色*/
+                                color: rgb(4,50,155);
+                            }
+                        </style>
+                    </head>
+                    <body>
+                          <h3 id="title">Hello World!</h3>
+                          <p>I like <span>HTML</span>,CSS and JavaScript.</p>
+                          <a href="https://developer.mozilla.org/en-US/docs/Web">
+                            Visit this website to learn web technology.
+                          </a>
+                    </body>
+                    </html>
+
+                </textarea>
+                
+                <h3>JavaScript初探</h3>
+                <p>其实，掌握了HTML和CSS，进行Web前端的简单开发已经不是问题，然而就像人体有了动作才能成为一个充满活力的活生生的人，原本为静态内容载体的HTML有了JavaScript才变得丰富、灵动了起来。现在，JavaScript已经成为Web浏览器、HTML十分亲密的朋友，也成为了Web前端最重要的技术。</p>
+                <p>JavaScript脚本是通过嵌入在HTML中来实现自身的功能的，最简单的嵌入方法就是通过script元素标签。</p>
+                <p>以下HTML文档包含了一段非常简单JavaScript，该段JavaScript可以改变HTML文档样式。你看，点击按钮后，文字就变红啦~</p>
+                <textarea rows="27" cols="100">
+                    <!DOCTYPE html>
+                    <html>
+                    <head>
+                        <title>HTML Example</title>
+                        <style type="text/css">
+                            #title{    
+                                color: rgb(4,50,155);
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <h3 id="title">Hello World!</h3>
+                        <p>I like <span>HTML</span>,CSS and JavaScript.</p>
+                        <a href="https://developer.mozilla.org/en-US/docs/Web">
+                          Visit this website to learn web technology.
+                        </a>
+                        <br>
+                        <button type="button" onclick="myFunction()">点击这里改变标题颜色</button>
+                        <script>
+                              function myFunction()
+                              {
+                              x=document.getElementById("title") // 找到元素id="title"
+                              x.style.color="#ff0000";           // 改变元素颜色为红色
+                              }
+                        </script>
+                    </body>
+                    </html>
+                </textarea>
+            </div>
+        </div>
+        <br>
+        <hr>
+        <h4>参考文献</h4>
+        <p>(美) Adam Freeman 著，高涛，肖楠，陈钢译. HTML5权威指南[M].北京：人民邮电出版社，2014.</p>
+        
+        <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+        <script src="http://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <script>
+        </script>
+  </body>
+</html>
+
