@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <style type="text/css">
+        #main{
+            position: absolute;
+            left:15%;
+            height:600px;
+            width:50%;
+        }
+    </style>
+</head>
+<body>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main"></div>
+    <!-- ECharts单文件引入 -->
+    <script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
+    <script type="text/javascript">
+        // 路径配置
+        require.config({
+            paths: {
+                echarts: 'http://echarts.baidu.com/build/dist'
+            }
+        });
+        
+        // 使用
+        require(
+            [
+                'echarts',
+                'echarts/chart/bar' // 使用柱状图就加载bar模块，按需加载
+            ],
+            function (ec) {
+                // 基于准备好的dom，初始化echarts图表
+                var myChart = ec.init(document.getElementById('main')); 
+                
+               var option = {
+                                  title:{
+                                    show:true,
+                                    text:'什么样的程序\统计语言是你在做\n分析、挖掘、科学计算的时候所需要的\n【713名调查对象】',
+                                    //subtext:'【713名调查对象】',
+                                    x:'center',
+                                    y:'top',
+                                    textStyle:{
+                                      fontFamily:'微软雅黑',
+                                      fontSize:16
+                                    }
+                                   
+                                },
+                                tooltip: {
+                                    show: true
+                                },
+                                legend: {
+                                    orient:'vertical',
+                                    x:'right',
+                                    y:40,
+                                    data:['2013','2012','2011']
+                                },
+                                yAxis : [
+                                    {
+                                        type : 'category',
+                                        name : '语言种类',
+                                        nameLocation:'end',
+                                        data : //['R','Python','SQL','SAS','Java','MATLAB']
+                                        [
+                                          {value:'MATLAB',
+                                            textStyle:{
+                                              fontFamily:'arial narrow',
+                                              fontSize:20
+                                            }
+                                          },
+                                            {value:'JAVA',
+                                            textStyle:{
+                                              fontFamily:'arial narrow',
+                                              fontSize:20
+                                            }
+                                          },
+                                           {value:'SAS',
+                                            textStyle:{
+                                              fontFamily:'arial narrow',
+                                              fontSize:20
+                                            }
+                                          },
+                                            {value:'SQL',
+                                            textStyle:{
+                                              fontFamily:'arial narrow',
+                                              fontSize:20
+                                            }
+                                          },
+                                            {value:'Python',
+                                            textStyle:{
+                                              fontFamily:'arial narrow',
+                                              fontSize:20
+                                            }
+                                          },
+                                            {value:'R',
+                                            textStyle:{
+                                              fontFamily:'arial narrow',
+                                              fontSize:20
+                                            }
+                                          }
+                                        ]
+                                    }
+                                ],
+                                xAxis : [
+                                    {
+                                        type : 'value',
+                                        name:'使用人数\n百分比（%）',
+                                        
+                                    }  
+                                ],
+                                series : [
+                                {
+                                   "name":"2013",               //系列名称
+                                   "type":"bar",               //图表类型，line/scatter/bar/pie/radar
+                                   "data"://[60.9,38.8,36.6,20.8,16.5,12.5]
+                                   [12.5,16.5,20.8,36.6,38.8,60.9],
+                                   itemStyle:{
+                                        normal:{
+                                            borderRadius: 10,
+                                            color:'rgb(78,161,227)' ,
+                                            label :{
+                                                show : true,
+                                                textStyle :{
+                                                    fontSize : '16',
+                                                    fontFamily : '微软雅黑'
+                                                    //fontWeight : 'bold'
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                    {
+                                        "name":"2012",           //系列名称
+                                        "type":"bar",               //图表类型，
+                                        "data"://[52.5,36.1,32.1,19.7,21.2,13.1]
+                                        [13.1,21.2,19.7,32.1,36.1,52.5],
+                                        itemStyle:{
+                                        normal:{
+                                            borderRadius: 10,
+                                            color:'rgb(197,226,242)',
+                                            label :{
+                                                show : true,
+                                                textStyle :{
+                                                    fontSize : '16',
+                                                    fontFamily : '微软雅黑'
+                                                    //fontWeight : 'bold'
+                                                }
+                                            }
+                                        }
+                                       }
+                                    },
+                                    {
+                                       "name":"2011",           //系列名称
+                                       "type":"bar",               //图表类型，
+                                       "data"://[45.1,24.6,32.3,21.2,24.4,14.6]
+                                       [14.6,24.4,21.2,32.3,24.6,45.1],
+                                       itemStyle:{
+                                        normal:{
+                                            borderRadius: 10,
+                                            color:'rgb(25,53,99)' ,
+                                            label :{
+                                                show : true,
+                                                textStyle :{
+                                                    fontSize : '16',
+                                                    fontFamily : '微软雅黑'
+                                                    //fontWeight : 'bold'
+                                                }
+                                            }
+                                        }
+                                       }
+                                    }
+                                ]
+                            };
+                    
+        
+                // 为echarts对象加载数据 
+                myChart.setOption(option); 
+            }
+        );
+    </script>
+</body>
