@@ -6,8 +6,8 @@
         #main{
             position: absolute;
             left:15%;
-            height:600px;
-            width:50%;
+            height:700px;
+            width:40%;
         }
     </style>
 </head>
@@ -35,17 +35,21 @@
                 var myChart = ec.init(document.getElementById('main')); 
                 
                var option = {
-                                  title:{
+                               title:{
                                     show:true,
                                     text:'什么样的程序\统计语言是你在做\n分析、挖掘、科学计算的时候所需要的\n【713名调查对象】',
                                     //subtext:'【713名调查对象】',
                                     x:'center',
                                     y:'top',
+                                    padding:[10,5,10,5],
                                     textStyle:{
                                       fontFamily:'微软雅黑',
-                                      fontSize:16
+                                      fontSize:20
                                     }
                                    
+                                },
+                                grid:{
+                                    y:'15%'
                                 },
                                 tooltip: {
                                     show: true
@@ -54,13 +58,29 @@
                                     orient:'vertical',
                                     x:'right',
                                     y:40,
-                                    data:['2013','2012','2011']
+                                    data:['2013','2012','2011'],
+                                    textStyle:{
+                                      fontFamily:'微软雅黑',
+                                      fontSize:16
+                                    }
                                 },
                                 yAxis : [
                                     {
                                         type : 'category',
                                         name : '语言种类',
                                         nameLocation:'end',
+                                        splitLine:false,
+                                        nameTextStyle:{
+                                             fontFamily:'微软雅黑',
+                                              fontSize:18,
+                                              color:'black'
+                                        },
+                                        axisLabel:{
+                                            textStyle:{
+                                              fontFamily:'arial narrow',
+                                              fontSize:20
+                                            } 
+                                        },
                                         data : //['R','Python','SQL','SAS','Java','MATLAB']
                                         [
                                           {value:'MATLAB',
@@ -105,19 +125,33 @@
                                 xAxis : [
                                     {
                                         type : 'value',
-                                        name:'使用人数\n百分比（%）',
+                                        name:'使用人数\n百分比\n（%）',
+                                        splitLine:false,
+                                        nameTextStyle:{
+                                             fontFamily:'微软雅黑',
+                                              fontSize:18,
+                                              color:'black'
+                                        },
+                                            axisLabel:{
+                                                textStyle:{
+                                                  fontFamily:'微软雅黑',
+                                                  fontSize:20
+                                                } 
+                                        },
                                         
                                     }  
                                 ],
                                 series : [
+                                    
                                 {
                                    "name":"2013",               //系列名称
                                    "type":"bar",               //图表类型，line/scatter/bar/pie/radar
                                    "data"://[60.9,38.8,36.6,20.8,16.5,12.5]
                                    [12.5,16.5,20.8,36.6,38.8,60.9],
+                                   barWidth:20,
                                    itemStyle:{
                                         normal:{
-                                            borderRadius: 10,
+                                            borderRadius: 20,
                                             color:'rgb(78,161,227)' ,
                                             label :{
                                                 show : true,
@@ -135,6 +169,7 @@
                                         "type":"bar",               //图表类型，
                                         "data"://[52.5,36.1,32.1,19.7,21.2,13.1]
                                         [13.1,21.2,19.7,32.1,36.1,52.5],
+                                        barWidth:20,
                                         itemStyle:{
                                         normal:{
                                             borderRadius: 10,
@@ -155,6 +190,9 @@
                                        "type":"bar",               //图表类型，
                                        "data"://[45.1,24.6,32.3,21.2,24.4,14.6]
                                        [14.6,24.4,21.2,32.3,24.6,45.1],
+                                       barWidth:20,
+                                       /*barCategoryGap:'400%',
+                                       barGap:'50%',*/
                                        itemStyle:{
                                         normal:{
                                             borderRadius: 10,

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <style type="text/css">
+        #main{
+         
+         height:700px;
+         /*width:1500px;*/
+        }
+    </style>
+</head>
+<body>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main"></div>
+    <!-- ECharts单文件引入 -->
+    <script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
+    <script type="text/javascript">
+        // 路径配置
+        require.config({
+            paths: {
+                echarts: 'http://echarts.baidu.com/build/dist'
+            }
+        });
+        
+        // 使用
+        require(
+            [
+                'echarts',
+                'echarts/chart/line' // 使用柱状图就加载bar模块，按需加载
+            ],
+            function (ec) {
+                // 基于准备好的dom，初始化echarts图表
+                var myChart = ec.init(document.getElementById('main')); 
+               /* var dataStyle = {
+                    normal: {
+                        label: {show:true},
+                        labelLine: {show:true}
+                    }
+                };
+                var placeHolderStyle = {
+                    normal : {
+                        color: 'rgba(0,0,0,0)',
+                        label: {show:false},
+                        labelLine: {show:false}
+                    },
+                    emphasis : {
+                        color: 'rgba(0,0,0,0)'
+                    }
+                };*/
+                   
+                      var option = {
+                                  title:{
+                                    show:true,
+                                    text:'2016年不同职位应届毕业生月基本工资',
+                                    //subtext:'【713名调查对象】',
+                                    x:'center',
+                                    y:'top',
+                                    textStyle:{
+                                      fontFamily:'微软雅黑',
+                                      fontSize:22
+                                      
+                                    }
+                                   
+                                },
+                                tooltip: {
+                                    show: true
+                                },
+                                legend: {
+                                    orient:'horizontal',
+                                    x:'center',
+                                    y:40,
+                                    data:['本科','硕士','博士']
+                                },
+                              
+                                xAxis : [
+                                    {
+                                        type : 'category',
+                                        name : '职位',
+                                        nameLocation:'end',
+                                        splitLine:{
+                                         show:false
+                                        },
+                                        nameTextStyle:{
+                                            fontFamily:'微软雅黑',
+                                            fontSize:20,
+                                            color:'black'
+                                        },
+                                        axisLabel:{
+                                            textStyle:{
+                                              fontFamily:'微软雅黑',
+                                              fontSize:20
+                                            },
+                                            rotate:1,
+                                            margin:1
+                                        },
+                                        data : //['R','Python','SQL','SAS','Java','MATLAB']
+                                        ['软件\n开发','硬件\n开发', '工程\n技术','销售','市场','职能\n支持','客服','管理\n培训生']
+                                    }
+                                ],
+                                yAxis : [
+                                    {
+                                       
+                                        type : 'value',
+                                        name:'工资（元/月）',
+                                        nameTextStyle:{
+                                            fontFamily:'微软雅黑',
+                                            fontSize:20,
+                                            color:'black'
+                                        },
+                                        splitLine:{
+                                         show:false
+                                        },
+                                        splitArea:{
+                                            show:false
+                                        },
+                                        min:0,
+                                        max:12000,
+                                        splitNumber:4
+                                        
+                                    }  
+                                ],
+                                series : [
+                                {
+                                   "name":"本科",               //系列名称
+                                   "type":"line",               //图表类型，line/scatter/bar/pie/radar
+                                 
+                                   "data"://[60.9,38.8,36.6,20.8,16.5,12.5]
+                                   [6184,5360,4827,4831,5008,4862,4619,5507],
+                                   
+                                   itemStyle:{
+                                        normal:{
+                                            color:'rgb(205,254,104)' ,
+                                            label :{
+                                                show : true,
+                                               // position:'top',
+                                                textStyle :{
+                                                    fontSize : '16',
+                                                    fontFamily : '微软雅黑'
+                                                    //fontWeight : 'bold'
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                   "name":"硕士",               //系列名称
+                                   "type":"line",               //图表类型，line/scatter/bar/pie/radar
+                                 
+                                   "data"://[60.9,38.8,36.6,20.8,16.5,12.5]
+                                   [7826,6901,6342,6009,6689,5806,5744,6960],
+                                   
+                                   itemStyle:{
+                                        normal:{
+                                            color:'rgb(251,154,6)' ,
+                                            label :{
+                                                show : true,
+                                               // position:'top',
+                                                textStyle :{
+                                                    fontSize : '16',
+                                                    fontFamily : '微软雅黑'
+                                                    //fontWeight : 'bold'
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                   "name":"博士",               //系列名称
+                                   "type":"line",               //图表类型，line/scatter/bar/pie/radar
+                                 
+                                   "data"://[60.9,38.8,36.6,20.8,16.5,12.5]
+                                   [9636,9351,8214,7700,7806,7600,7532],
+                                   
+                                   itemStyle:{
+                                        normal:{
+                                            color:'rgb(4,50,155)' ,
+                                            label :{
+                                                show : true,
+                                               // position:'top',
+                                                textStyle :{
+                                                    fontSize : '16',
+                                                    fontFamily : '微软雅黑'
+                                                    //fontWeight : 'bold'
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                ]
+                            };
+                    // 为echarts对象加载数据 
+                myChart.setOption(option); 
+            }
+
+        );
+    </script>
+</body>
