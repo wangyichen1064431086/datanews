@@ -117,7 +117,7 @@
         <h3>2. 各国数据集开放程度大比拼</h3>
         <p>开放数据指数是开放知识基金会开展的、针对各国（地区）数据开放程度的评估项目。它考察了10个关键数据集，是评估数据集开放程度的重要标准。</p>
         <br>
-        <div class="pictitle">2014年世界各国开放数据指数 <br>（颜色越深开放数据指数越高，灰色为缺失数据）</div>       
+        <div class="pictitle">2014年世界各国开放数据指数 <br>（颜色越红开放数据指数越高，灰色为缺失数据）</div>       
         <div id="main"></div>
         <p>中国开放数据指数为37%，世界排名仅第57位。</p>
         <p>英国开放数据指数为97%，世界排名第1位。</p>
@@ -127,27 +127,27 @@
         <p class="pictitle">2014年联合国常任理事国主要数据集开放程度比较</p>
         <!--插入统计图-->
         <div class="row">
-          <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+          <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
           </div>
-          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+          <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
              <div id="main1"></div>
           </div>
-          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+          <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
              <div id="main2"></div>
           </div>
-          <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+          <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
           </div>
         </div>
         <div class="row">
-          <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+          <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
           </div>
-          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+          <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
              <div id="main3"></div>
           </div>
-          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+          <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
              <div id="main4"></div>
           </div>
-          <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+          <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
           </div>
         </div>
         
@@ -234,11 +234,15 @@
                 dataRange: {
                     min: 0,
                     max: 100,
-                   // text:['100%','0'],
+                    selectedMode:false,
+                    text:['','(%)'],
+                    textStyle:{
+                        fontSize:20
+                    },
                     realtime: false,
                     calculable : true,
-                    color: ['blue','white'],
-                    x:'350',
+                    color: ['rgb(255,66,0)','rgb(201,255,69)'],/*rgb(0,149,74)*/
+                    x:'160',
                     y:'300'
                 },
                 series : [
@@ -486,7 +490,7 @@
                         textStyle : {
                             color : '#4682B4',
                             fontFamily : '微软雅黑',
-                            fontSize : 24,
+                            fontSize : 32,
                             fontWeight : 'bolder'
                         }
                     },
@@ -497,12 +501,12 @@
                     legend: {
                         orient : 'vertical',
                         x : 'left',
-                        y : '350',
-                        itemGap:12,
+                        y : '330',
+                        itemGap:20,
                         data:['英国','美国','俄罗斯','法国','中国'],
                         textStyle : {
                             fontFamily : '微软雅黑',
-                            fontSize : 16,
+                            fontSize : 28,
                         }
                     },
                     series : [
@@ -531,7 +535,7 @@
                                         //position:inner,
                                         //distance:0.5,
                                         textStyle :{
-                                            fontSize : '18',
+                                            fontSize : '28',
                                             fontFamily : '微软雅黑',
                                             color:'rgb(51,51,51)'
                                             //fontWeight : 'bold'
@@ -570,7 +574,7 @@
                                     label :{
                                         show : true,
                                         textStyle :{
-                                            fontSize : '18',
+                                            fontSize : '28',
                                             fontFamily : '微软雅黑',
                                             color:'rgb(255,184,0)' 
                                             //fontWeight : 'bold'
@@ -608,7 +612,7 @@
                                     label :{
                                         show : true,
                                         textStyle :{
-                                            fontSize : '18',
+                                            fontSize : '28',
                                             fontFamily : '微软雅黑',
                                             color:'rgb(255,66,0)'
                                             //fontWeight : 'bold'
@@ -647,7 +651,7 @@
                                     label :{
                                         show : true,
                                         textStyle :{
-                                            fontSize : '18',
+                                            fontSize : '28',
                                             fontFamily : '微软雅黑',
                                             color:'rgb(201,255,69)'
                                             //fontWeight : 'bold'
@@ -686,7 +690,7 @@
                                     label :{
                                         show : true,
                                         textStyle :{
-                                            fontSize : '18',
+                                            fontSize : '28',
                                             fontFamily : '微软雅黑',
                                             color:'rgb(0,149,74)'
                                             //fontWeight : 'bold'
@@ -755,7 +759,7 @@
                         textStyle : {
                             color : '#4682B4',
                             fontFamily : '微软雅黑',
-                            fontSize : 24,
+                            fontSize : 32,
                             fontWeight : 'bolder'
                         }
                     },
@@ -789,7 +793,7 @@
                                         //position:inner,
                                         //distance:0.5,
                                         textStyle :{
-                                            fontSize : '18',
+                                            fontSize : '28',
                                             fontFamily : '微软雅黑',
                                             color:'rgb(51,51,51)'
                                             //fontWeight : 'bold'
@@ -828,7 +832,7 @@
                                     label :{
                                         show : true,
                                         textStyle :{
-                                            fontSize : '18',
+                                            fontSize : '28',
                                             fontFamily : '微软雅黑',
                                             color:'rgb(255,184,0)' 
                                             //fontWeight : 'bold'
@@ -866,7 +870,7 @@
                                     label :{
                                         show : true,
                                         textStyle :{
-                                            fontSize : '18',
+                                            fontSize : '28',
                                             fontFamily : '微软雅黑',
                                             color:'rgb(255,66,0)'
                                             //fontWeight : 'bold'
@@ -905,7 +909,7 @@
                                     label :{
                                         show : true,
                                         textStyle :{
-                                            fontSize : '18',
+                                            fontSize : '28',
                                             fontFamily : '微软雅黑',
                                             color:'rgb(201,255,69)'
                                             //fontWeight : 'bold'
@@ -944,7 +948,7 @@
                                     label :{
                                         show : true,
                                         textStyle :{
-                                            fontSize : '18',
+                                            fontSize : '28',
                                             fontFamily : '微软雅黑',
                                             color:'rgb(0,149,74)'
                                             //fontWeight : 'bold'
@@ -1013,7 +1017,7 @@
                         textStyle : {
                             color : '#4682B4',
                             fontFamily : '微软雅黑',
-                            fontSize : 24,
+                            fontSize : 32,
                             fontWeight : 'bolder'
                         }
                     },
@@ -1047,7 +1051,7 @@
                                         //position:inner,
                                         //distance:0.5,
                                         textStyle :{
-                                            fontSize : '18',
+                                            fontSize : '28',
                                             fontFamily : '微软雅黑',
                                             color:'rgb(51,51,51)'
                                             //fontWeight : 'bold'
@@ -1086,7 +1090,7 @@
                                     label :{
                                         show : true,
                                         textStyle :{
-                                            fontSize : '18',
+                                            fontSize : '28',
                                             fontFamily : '微软雅黑',
                                             color:'rgb(255,184,0)' 
                                             //fontWeight : 'bold'
@@ -1124,7 +1128,7 @@
                                     label :{
                                         show : true,
                                         textStyle :{
-                                            fontSize : '18',
+                                            fontSize : '28',
                                             fontFamily : '微软雅黑',
                                             color:'rgb(255,66,0)'
                                             //fontWeight : 'bold'
@@ -1163,7 +1167,7 @@
                                     label :{
                                         show : true,
                                         textStyle :{
-                                            fontSize : '18',
+                                            fontSize : '28',
                                             fontFamily : '微软雅黑',
                                             color:'rgb(201,255,69)'
                                             //fontWeight : 'bold'
@@ -1202,7 +1206,7 @@
                                     label :{
                                         show : true,
                                         textStyle :{
-                                            fontSize : '18',
+                                            fontSize : '28',
                                             fontFamily : '微软雅黑',
                                             color:'rgb(0,149,74)'
                                             //fontWeight : 'bold'
@@ -1226,6 +1230,7 @@
             }
         );
     </script>
+    
     <script type="text/javascript">
         // 路径配置
         require.config({
@@ -1270,7 +1275,7 @@
                         textStyle : {
                             color : '#4682B4',
                             fontFamily : '微软雅黑',
-                            fontSize : 24,
+                            fontSize : 32,
                             fontWeight : 'bolder'
                         }
                     },
@@ -1304,7 +1309,7 @@
                                         //position:inner,
                                         //distance:0.5,
                                         textStyle :{
-                                            fontSize : '18',
+                                            fontSize : '28',
                                             fontFamily : '微软雅黑',
                                             color:'rgb(51,51,51)'
                                             //fontWeight : 'bold'
@@ -1343,7 +1348,7 @@
                                     label :{
                                         show : true,
                                         textStyle :{
-                                            fontSize : '18',
+                                            fontSize : '28',
                                             fontFamily : '微软雅黑',
                                             color:'rgb(255,184,0)' 
                                             //fontWeight : 'bold'
@@ -1381,7 +1386,7 @@
                                     label :{
                                         show : true,
                                         textStyle :{
-                                            fontSize : '18',
+                                            fontSize : '28',
                                             fontFamily : '微软雅黑',
                                             color:'rgb(255,66,0)'
                                             //fontWeight : 'bold'
@@ -1420,7 +1425,7 @@
                                     label :{
                                         show : true,
                                         textStyle :{
-                                            fontSize : '18',
+                                            fontSize : '28',
                                             fontFamily : '微软雅黑',
                                             color:'rgb(201,255,69)'
                                             //fontWeight : 'bold'
@@ -1459,7 +1464,7 @@
                                     label :{
                                         show : true,
                                         textStyle :{
-                                            fontSize : '18',
+                                            fontSize : '28',
                                             fontFamily : '微软雅黑',
                                             color:'rgb(0,149,74)'
                                             //fontWeight : 'bold'
@@ -1483,5 +1488,6 @@
             }
         );
     </script>
+    
 </body>
 </html>
